@@ -136,13 +136,14 @@ type StoriesReview struct {
 }
 
 // ProjectsList 获取项目需求列表
-func (s *StoriesService) ProjectsList(id int, limit, page string) (*StoriesListMeta, *req.Response, error) {
+func (s *StoriesService) ProjectsList(id int, limit, page, status string) (*StoriesListMeta, *req.Response, error) {
 	var u StoriesListMeta
 	resp, err := s.client.client.R().
 		SetHeader("Token", s.client.token).
 		SetQueryParams(map[string]string{
-			"page":  page,
-			"limit": limit,
+			"page":   page,
+			"limit":  limit,
+			"status": status,
 		}).
 		SetSuccessResult(&u).
 		Get(s.client.RequestURL(fmt.Sprintf("/projects/%d/stories", id)))
@@ -150,13 +151,14 @@ func (s *StoriesService) ProjectsList(id int, limit, page string) (*StoriesListM
 }
 
 // ProductsList 获取产品需求列表
-func (s *StoriesService) ProductsList(id int, limit, page string) (*StoriesListMeta, *req.Response, error) {
+func (s *StoriesService) ProductsList(id int, limit, page, status string) (*StoriesListMeta, *req.Response, error) {
 	var u StoriesListMeta
 	resp, err := s.client.client.R().
 		SetHeader("Token", s.client.token).
 		SetQueryParams(map[string]string{
-			"page":  page,
-			"limit": limit,
+			"page":   page,
+			"limit":  limit,
+			"status": status,
 		}).
 		SetSuccessResult(&u).
 		Get(s.client.RequestURL(fmt.Sprintf("/products/%d/stories", id)))
