@@ -1,4 +1,4 @@
-module github.com/easysoft/go-zentao/v21
+module github.com/taerc/go-zentao/v21
 
 go 1.22.0
 
