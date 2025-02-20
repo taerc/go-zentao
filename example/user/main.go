@@ -1,5 +1,5 @@
 //
-//  Copyright 2022, easysoft
+//  Copyright 2022, taerc
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/easysoft/go-zentao/v21/zentao"
+	"github.com/taerc/go-zentao/v21/zentao"
 
 	"github.com/davecgh/go-spew/spew"
 )
