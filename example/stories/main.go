@@ -19,16 +19,16 @@ package main
 import (
 	"log"
 
-	"github.com/easysoft/go-zentao/v21/zentao"
+	"github.com/taerc/go-zentao/v21/zentao"
 
 	"github.com/davecgh/go-spew/spew"
 )
 
 func main() {
 	zt, err := zentao.NewBasicAuthClient(
-		"admin",
-		"jaege1ugh4ooYip7",
-		zentao.WithBaseURL("http://127.0.0.1"),
+		"wangfangming",
+		"aship@2021",
+		zentao.WithBaseURL("http://172.16.10.21:9000/zentao"),
 		zentao.WithDevMode(),
 		zentao.WithDumpAll(),
 		zentao.WithoutProxy(),
@@ -36,12 +36,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	p1, _, err := zt.Stories.ProductsList(1)
+	p1, _, err := zt.Stories.ProductsList(1, "500", "1")
 	if err != nil {
 		panic(err)
 	}
 	log.Printf("product 1 stories count: %v", len(p1.Stories))
-	p2, _, err := zt.Stories.ProjectsList(2)
+	p2, _, err := zt.Stories.ProjectsList(152, "20", "2")
 	if err != nil {
 		panic(err)
 	}

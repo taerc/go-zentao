@@ -12,12 +12,15 @@ Zentao API client enabling Go programs to interact with Zentao in a simple and u
 
 基于ZenTao最新开源版本[`21.3`](https://github.com/easysoft/zentaopms/releases/tag/zentaopms_21.3_20241227)
 
+## 说明
+来源于 "github.com/easysoft/go-zentao/v21/zentao" , 扩展代码分页查询支持
+
 ## API
 
 ### 使用
 
 ```go
-import "github.com/easysoft/go-zentao/v21/zentao"
+import "github.com/tarec/go-zentao/v21/zentao"
 ```
 
 ### 支持Restful
